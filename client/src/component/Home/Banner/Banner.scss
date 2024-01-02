@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi&display=swap');
+@import "../../../css-config/mixins.scss";
+   .hero-banner {
+       padding: 40px 0;
+       position: relative;
+        background-image: linear-gradient(to right, #e23d45, #5500ff);
+        // background: linear-gradient(109.6deg, rgb(0, 204, 130) 11.2%, rgb(58, 181, 46) 91.7%);
+       @include md {
+           height: calc(100vh - 80px);
+       }
+       .content {
+           height: 100%;
+           display: flex;
+           justify-content: flex-end;
+           align-items: center;
+           flex-direction: column-reverse;
+           max-width: calc(100% - 20px);
+           margin: 0 auto;
+           position: relative;
+           @include md {
+               flex-direction: row;
+               max-width: 1200px;
+           }
+           .banner-img {
+            position: relative;
+            z-index: 9;
+            width: 400px;
+            margin-bottom: 20px;
+            filter: drop-shadow(4px 4px 4px rgb(0, 0, 0)); // Add the drop-shadow filter
+            @include md {
+              width: 600px;
+              margin-right:-50px;
+              margin-top: 0px;
+              margin-bottom: -10px;
+              filter: drop-shadow(4px 4px 4px rgb(36, 33, 33)); // Add the drop-shadow filter
+            }
+            @include xxl {
+              width: 610px;
+              margin-right: 0;
+              margin-top: 0;
+              filter: drop-shadow(4px 4px 4px rgb(0, 0, 0)); // Add the drop-shadow filter
+            }
+                    
+           }
+           .text-content {
+               color: white;
+               text-align: center;
+               display: flex;
+               flex-direction: column;
+               align-items: center;
+               @include md {
+                   position: absolute;
+                   left: 50px;
+                   top: 50%;
+                   transform: translateY(-50%);
+               }
+               @include xxl {
+                   left: 0;
+               }
+               h1 {
+                   font-size: 50px;
+                   font-family:Centra, Courier, monospace;
+                   font-weight: 150;
+                   line-height: 1;
+                   color: white;
+                   margin-bottom: 20px;
+                   @include md {
+                       font-size: 105px;
+                   }
+               }
+               p {
+                   max-width: 300px;
+                   font-size: 20px;
+                   font-weight: bold;
+                   font-family: 'Tiro Devanagari Hindi', serif;
+                   line-height: 30px;
+                   margin-bottom: 20px;
+                   @include md {
+                       max-width: 500px;
+                       font-size: 18px;
+                       font-family: 'Tiro Devanagari Hindi', serif;
+                       line-height: 30px;
+                       margin-bottom: 40px;
+                   }
+               }
+               .ctas {
+                   display: flex;
+                   justify-content: center;
+                   gap: 20px;
+                   .banner-cta {
+                       text-transform: uppercase;
+                       font-size: 13px;
+                       font-family:Centra, Courier, monospace;
+                       font-weight: 500;
+                       width: fit-content;
+                      background-color: white;
+                       padding: 10px 20px;
+                       transition: all ease 0.3s;
+                       cursor: pointer;
+                       .social-icon {
+                        margin-left: 35px;
+                        width: 70%;
+                        display: flex;
+                        justify-content: space-evenly
+                      }
+                       &.v2 {
+                           background-color: white;
+                        //    color: black;
+                       }
+                       &.a {
+                        text-decoration: none;
+                       }
+                       &:hover {
+                           opacity: 0.6;
+                       }
+                   }
+
+                   
+               }
+           }
+       }
+   }
